@@ -10,11 +10,11 @@ const Index = () => {
       </p>
       <div className='text-center my-12'>
         <Link href='/pesquisa'>
-          <a className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover-shadow'>Dar a  opinião ou Sugestão</a>
+          <a className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow'>Dar a  opinião ou Sugestão</a>
         </Link>
       </div>
       <p className='my-12 text-center'>
-        Mensagem do descoto
+        Mensagem do desconto
       </p>
     </div>
   );
