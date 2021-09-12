@@ -24,7 +24,7 @@ export default async (req, res) => {
     let Promo = '';
 
     if(mostrarPromocaoCell.value === 'VERDADEIRO') {
-      Cupom = 'temporario';
+      Cupom = parseInt(moment().format('YYMMDDHHmmssSSS')).toString(16);
       Promo = textoCell.value;
     }
      
@@ -32,6 +32,7 @@ export default async (req, res) => {
       Nome: data.Nome,
       Email: data.Email,
       Whatsapp: data.Whatsapp,
+      Nota: 5,
       'Data Preenchimento': moment().format('MMMM Do YYYY, h:mm:ss a'),
       Cupom,
       Promo
