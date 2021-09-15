@@ -27,7 +27,7 @@ const Pesquisa = () => {
   };
   const onChange = evt => {
     const value = evt.target.value;
-    const key = event.target.name
+    const key = event.target.name;
     setForm(old => ({
       ...old,
       [key]: value,
@@ -61,7 +61,10 @@ const Pesquisa = () => {
       { success && <div className='w-1/5 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou sua critica</p>
         {
-          retorno.showCupom && <div>{retorno.Cupom}</div>
+          retorno.showCupom && <div className='text-center'>
+            Seu cupom: <br />
+            <spam className='font-bold'>{retorno.Cupom}</spam>
+          </div>
         }
         cupom: {JSON.stringify(retorno)}</div>}
     </div>
