@@ -7,9 +7,10 @@ const Pesquisa = () => {
     Nome: '',
     Email: '',
     Whatsapp: '',
+    Nota: 5,
   
   });
-
+  const notas = [0, 1, 2, 3, 4, 5];
   const [ success, setSuccess ] = useState(false);
   const [ retorno, setRetorno ] = useState({});
 
@@ -50,6 +51,17 @@ const Pesquisa = () => {
         <input type='text'className='p-4 block shadow bg-blue-100 m-2 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
         <label className='font-bold'>Whatsapp:</label>
         <input type='text'className='p-4 block shadow bg-blue-100 m-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
+        <label className='font-bold'>Nota:</label>
+        <div className='flex py-6'>
+          { notas.map(nota => { 
+            return (
+              <label className='block w-1/6 text-center'> 
+                {nota} <br/>
+                <input type='radio' name='Nota' value={nota} onChange={onChange}/>
+              </label>) 
+            })
+          }
+        </div>
         <button
           className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow'
           onClick={save}
@@ -61,12 +73,19 @@ const Pesquisa = () => {
       { success && <div className='w-1/5 mx-auto'>
         <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>Obrigado por contribuir com sua sugestão ou sua critica</p>
         {
-          retorno.showCupom && <div className='text-center'>
+          retorno.showCupom && <div className='text-center border p-4 mb-4'>
             Seu cupom: <br />
-            <spam className='font-bold'>{retorno.Cupom}</spam>
+            <spam className='font-bold text-2xl'>{retorno.Cupom}</spam>
           </div>
         }
-        cupom: {JSON.stringify(retorno)}</div>}
+        {
+          retorno.showCupom && <div className='text-center border p-4 mb-4'>
+            <spam className='font-bold block mb-2'>{retorno.Promo}</spam>
+            <br/>
+            <spam className='italic'>Tire um print ou foto desta tela e apresente ao garçom</spam>
+          </div>
+        }
+      </div> }
     </div>
   );
 };
