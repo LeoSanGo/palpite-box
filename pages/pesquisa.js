@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import PageTitle from '../components/PageTitle';
 
 
 const Pesquisa = () => {
@@ -10,6 +10,7 @@ const Pesquisa = () => {
     Nota: 5,
   
   });
+
   const notas = [0, 1, 2, 3, 4, 5];
   const [ success, setSuccess ] = useState(false);
   const [ retorno, setRetorno ] = useState({});
@@ -36,6 +37,7 @@ const Pesquisa = () => {
   }
   return (
     <div className='pt-6'>
+      <PageTitle title='Pesquisa' />
       <h1 className='text-center font-bold my-4 text-2xl'>
         Criticas e Sugestões
       </h1>
