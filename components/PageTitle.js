@@ -1,5 +1,5 @@
 import react from 'react';
-import Head from 'next/Head';
+import Head from 'next/head';
 
 const PageTitle = ({ title }) => {
   return(
