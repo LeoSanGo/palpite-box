@@ -1,5 +1,5 @@
 <h1 align="center">Palpite Box</h1>
-<img alt="palpite" title="#palpite" src=""/>
+<img alt="palpite" title="palpitebox.png" src="palpitebox.png"/>
 <h3 align="center">🚀 Aplicação desenvolvida durante a semana Fullstack Master do DevPleno 🚀</h3>
 
 
